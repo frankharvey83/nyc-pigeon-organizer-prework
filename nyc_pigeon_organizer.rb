@@ -33,6 +33,8 @@ end
 end
 
 data.each do |attribute, hash|
+  hash.each do |trait, arr|
+    binding.pry
    pigeon_list.each do |name, empty_hash|
 
     empty_hash[attribute] = []
