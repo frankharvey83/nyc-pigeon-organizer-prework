@@ -39,7 +39,7 @@ data.each do |attribute, hash|
 
     empty_hash[attribute] = []
 
-
+end
 end
 binding.pry
 end
