@@ -1,15 +1,42 @@
 require 'pry'
-
+pigeon_data = {
+  :color => {
+    :purple => ["Theo", "Peter Jr.", "Lucky"],
+    :grey => ["Theo", "Peter Jr.", "Ms. K"],
+    :white => ["Queenie", "Andrew", "Ms. K", "Alex"],
+    :brown => ["Queenie", "Alex"]
+  },
+  :gender => {
+    :male => ["Alex", "Theo", "Peter Jr.", "Andrew", "Lucky"],
+    :female => ["Queenie", "Ms. K"]
+  },
+  :lives => {
+    "Subway" => ["Theo", "Queenie"],
+    "Central Park" => ["Alex", "Ms. K", "Lucky"],
+    "Library" => ["Peter Jr."],
+    "City Hall" => ["Andrew"]
+  }
+}
 def nyc_pigeon_organizer(data)
 pigeon_list = {}
 
 # find pigeon name
 # insert as key to new hash
 data.each do |attribute, hash|
-  hash.each do |color, names|
-    names.each do |name|
-      pigeon_list[name] = {:color => [], :gender => [], :lives => []}
+
+  hash.each do |trait, names|
+    names.each do |name, hash|
+      pigeon_list[name] = { }
 end
+end
+
+end
+
+data.each do |attribute, hash|
+   pigeon_list.each do |name, empty_hash|
+     binding.pry
+    empty_hash = {attribute => []}
+
 end
 end
 
@@ -38,23 +65,15 @@ end
 
 end
 
-
-
-
-
-
-
-
-
-{
-  "Lucky"=>{},
- "Peter Jr."=>{},
- "Ms. K"=>{},
- "Alex"=>{},
- "Andrew"=>{},
- "Theo"=>{},
- "Queenie"=>{}
-}
+# {
+#   "Lucky"=>{:color => [], :gender => [], :lives => []}
+#  "Peter Jr."=>{},
+#  "Ms. K"=>{},
+#  "Alex"=>{},
+#  "Andrew"=>{},
+#  "Theo"=>{},
+#  "Queenie"=>{}
+# }
 
 # pigeon_data = {
 #   :color => {
